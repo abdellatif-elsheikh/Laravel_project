@@ -1,0 +1,13 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../imgs/form.jpg') no-repeat center center/cover;
+}
+
+.form{
+    width: 660px;
+    max-width: 100%;
+    color: #fff;
+}

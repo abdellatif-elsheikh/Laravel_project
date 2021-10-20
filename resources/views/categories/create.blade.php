@@ -15,7 +15,7 @@
 @section('content')
     <div class="layer">
         <div class="container">
-            <form action="{{ url('save/category') }}" method="POST" class="form m-auto">
+            <form action="{{ url('save/category') }}" method="POST" class="form m-auto" enctype="multipart/form-data">
                 @csrf
                 @include('errors')
                 <div class="mb-3">
@@ -25,6 +25,10 @@
                 <div class="mb-3">
                     <label for="desc" class="form-label">Category Deascreption</label>
                     <textarea class="form-control" name="desc" id="desc" rows="10"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Default file input example</label>
+                    <input class="form-control" type="file" name="img" id="formFile">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
@@ -36,6 +40,6 @@
 
 {{-- Start javScript connection --}}
 @section('js')
-    <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 @endsection
 {{-- End javScript connection --}}

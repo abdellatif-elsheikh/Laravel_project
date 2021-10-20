@@ -15,6 +15,7 @@ All Categories
 
 <section class="category my-4">
     <div class="container bg-light text-dark p-5">
+        <img src='{{asset("uploads/$category->img")}}' alt="" name="img" class="img-fluid">
         <h1>{{$category->name}}</h1>
         <p class="my-3">{{$category->desc}}</p>
         <a href="{{url()->previous()}}" class="btn btn-dark px-5">Back</a>
